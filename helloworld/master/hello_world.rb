@@ -1,2 +1,3 @@
-# this is a useless commentss
+#!/Users/benwisinski/.rbenv/shims/ruby
+
 puts 'Hello World!'
