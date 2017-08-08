@@ -1,3 +1,3 @@
-#!/Users/benwisinski/.rbenv/shims/ruby
+#!/usr/bin/ruby
 
 puts 'Hello World!'
