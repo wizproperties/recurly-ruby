@@ -14,8 +14,6 @@ Recurly.default_currency = 'USD'
 
 
 
-
-
 class Subscription_Test
 
 #creates a subscription on the account with the passed in account number
@@ -76,7 +74,7 @@ class Subscription_Test
     account = Recurly::Account.find account_number
     #puts account
     #puts "Account billing_info: #{account.billing_info}"
-    puts "subscriptions count for #{account.account_number}: #{account.subscriptions.count}"
+    puts "subscriptions count for #{account.account_code}: #{account.subscriptions.count}"
     account.subscriptions.count
   end
 
