@@ -16,9 +16,15 @@ Recurly.default_currency = 'USD'
 begin
   #if account does not exist, a NotFound Error will be thrown
   account = Recurly::Account.find '1234'
-  puts account
+  #puts account
+  #puts "Account billing_info: #{account.billing_info}"
+  account.subscriptions.find_each do |subscription|
+    puts "Subscription: #{subscription.inspect}"
+  end
   #subscription will fail because a plan_code is not set
   #subscription = Recurly::Subscription.create!(:account => account)
+
+
 rescue Recurly::Resource::NotFound => e
   puts e.message
 rescue Recurly::API::UnprocessableEntity => e
