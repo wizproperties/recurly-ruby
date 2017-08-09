@@ -18,12 +18,15 @@ begin
   account = Recurly::Account.find '1234'
   #puts account
   #puts "Account billing_info: #{account.billing_info}"
+  puts "subscriptions count: #{account.subscriptions.count}"
+  
   account.subscriptions.find_each do |subscription|
     puts "Subscription: #{subscription.inspect}"
   end
   #subscription will fail because a plan_code is not set
   #subscription = Recurly::Subscription.create!(:account => account)
 
+  #wothless comment to test git
 
 rescue Recurly::Resource::NotFound => e
   puts e.message
