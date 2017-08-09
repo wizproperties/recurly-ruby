@@ -19,7 +19,7 @@ begin
   #puts account
   #puts "Account billing_info: #{account.billing_info}"
   puts "subscriptions count: #{account.subscriptions.count}"
-  
+
   account.subscriptions.find_each do |subscription|
     puts "Subscription: #{subscription.inspect}"
   end
@@ -68,3 +68,13 @@ subscription = Recurly::Subscription.create(
   }
 )
 =end
+
+
+class Subscription_Test
+  def create_sub(account_number)
+  end
+
+  def sub_count
+    0
+  end
+end
